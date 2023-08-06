@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* Add a border with gradient background to the whole page */
+            background: linear-gradient(45deg, #687c94, #ffffff, #687c94);
+            border: 5px solid #333;
+            box-sizing: border-box;
+        }
+
+        /* Styles for the menu button */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        /* Styles for the sidebar menu */
+        .sidebar {
+            position: fixed;
+            top: 80px;
+            left: -250px;
+            width: 250px;
+            height: 100vh;
+            padding: 15px;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .nav-link {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #dcdcdc;
+        }
+
+        /* Add styles for the active link */
+        .nav-item.active .nav-link {
+            color: #ff8c00;
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nutrition-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.nutrition-form input {
+    width: 60px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nutrition-form span {
+    color: #999;
+}
+
+.reviews-section {
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.review h3 {
+    margin: 0;
+}
+
+.review p {
+    margin: 10px 0;
+}
+
+.review .rating {
+    color: orange;
+}
+
+.feedback-form {
+    margin-top: 40px;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+/* Reviews Section */
+.reviews-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.review p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" id="menu-button">&#9776; Menu</button>
+    <nav class="sidebar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="airoom.html">Ai Roommate Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Network.html">Students Network</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Attandance.html">Attandance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Leave.html">Leave</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Navigation.html">Indoor Navigation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Laundry.html">Laundry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chatbot.html">Chatbot</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Mess.html">Mess</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Complaints.html">Complaints</a>
+            </li>
+        </ul>
+    </nav>
+
+ 
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Mess System</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+        <h1>Mess System</h1>
+    </header>
+
+    <div class="container">
+        <h2>Personalized Information</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="room">Room:</label>
+            <input type="text" id="room">
+        </div>
+        <div class="form-group">
+            <label for="allergies">Allergies:</label>
+            <input type="text" id="allergies">
+        </div>
+        <div class="form-group">
+            <label for="balance">Balance:</label>
+            <input type="number" id="balance">
+        </div>
+        <div class="form-group">
+            <label for="mealPlan">Meal Plan:</label>
+            <select id="mealPlan">
+                <option value="Regular">Regular</option>
+                <option value="Premium">Premium</option>
+                <option value="Vegetarian">Vegetarian</option>
+            </select>
+        </div>
+        <button id="submitBtn">Submit</button>
+        <div id="result"></div>
+<h2>Nutrition Information</h2>
+
+<div class="nutrition-form">
+    <label for="calories">Calories:</label>
+    <input type="number" id="calories" min="0" required>
+    <span id="calories-range">(0 - 500)</span>
+    <br>
+
+    <label for="protein">Protein (g):</label>
+    <input type="number" id="protein" min="0" required>
+    <span id="protein-range">(0 - 100)</span>
+    <br>
+
+    <label for="carbs">Carbs (g):</label>
+    <input type="number" id="carbs" min="0" required>
+    <span id="carbs-range">(0 - 200)</span>
+    <br>
+
+    <label for="fat">Fat (g):</label>
+    <input type="number" id="fat" min="0" required>
+    <span id="fat-range">(0 - 50)</span>
+    <br>
+</div>
+<h3>Best Food for Each Nutrient:</h3>
+<p>Calories: <span id="best-calories-food"></span></p>
+<p>Protein: <span id="best-protein-food"></span></p>
+<p>Carbs: <span id="best-carbs-food"></span></p>
+<p>Fat: <span id="best-fat-food"></span></p>
+
+
+   <div class="feedback-form">
+        <h2>Mess Feedback</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" required></textarea>
+        </div>
+        <button class="submit-btn" onclick="submitFeedback()">Submit Feedback</button>
+        <div id="response"></div>
+    </div>
+        <h2>Reviews</h2>
+  
+<div class="reviews-section">
+    <div class="review">
+        <h3>Satya</h3>
+        <p class="rating">Rating: 4.8 stars</p>
+        <p>Hostel Pro mess provides excellent food and service. The meals are always fresh and delicious. I highly recommend their mess to everyone.</p>
+    </div>
+    <div class="review">
+        <h3>Sujn</h3>
+        <p class="rating">Rating: 4.9 stars</p>
+        <p>The food at Hostel Pro mess is amazing. They offer a variety of dishes and cater to different dietary preferences. The mess staff is also very friendly and accommodating.</p>
+    </div>
+</div>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>
+
+<script>
+    const menuButton = document.getElementById('menu-button');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    // Add event listener to close sidebar when clicking outside
+    document.addEventListener('click', (event) => {
+        const targetElement = event.target;
+        if (!targetElement.closest('.sidebar') && !targetElement.closest('#menu-button')) {
+            sidebar.classList.remove('active');
+        }
+    });
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+    // Get user inputs
+    const name = document.getElementById('name').value;
+    const room = document.getElementById('room').value;
+    const allergies = document.getElementById('allergies').value;
+    const balance = parseFloat(document.getElementById('balance').value);
+    const mealPlan = document.getElementById('mealPlan').value;
+
+    // Display personalized information
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `
+        <h3>Personalized Information:</h3>
+        <p>Name: ${name}</p>
+        <p>Room: ${room}</p>
+        <p>Allergies: ${allergies}</p>
+        <p>Balance: $${balance}</p>
+        <p>Meal Plan: ${mealPlan}</p>
+    `;
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+    // Get input values
+    const calories = parseFloat(document.getElementById('calories').value);
+    const protein = parseFloat(document.getElementById('protein').value);
+    const carbs = parseFloat(document.getElementById('carbs').value);
+    const fat = parseFloat(document.getElementById('fat').value);
+
+    // Sample food data
+   const foods = [
+    { name: 'Salmon', calories: 208, protein: 24, carbs: 0, fat: 12 },
+    { name: 'Chicken Breast', calories: 165, protein: 31, carbs: 0, fat: 3.6 },
+    { name: 'Brown Rice', calories: 111, protein: 2.6, carbs: 23, fat: 1.8 },
+    { name: 'Avocado', calories: 160, protein: 2, carbs: 9, fat: 15 },
+    { name: 'Eggs', calories: 155, protein: 13, carbs: 1.1, fat: 11 },
+    { name: 'Oatmeal', calories: 150, protein: 5, carbs: 27, fat: 2.5 },
+    // Add more food items here...
+];
+
+
+    // Calculate the best food based on nutritional values
+    let bestFood = null;
+    let minDifference = Infinity;
+    for (const food of foods) {
+        const calorieDiff = Math.abs(calories - food.calories);
+        const proteinDiff = Math.abs(protein - food.protein);
+        const carbsDiff = Math.abs(carbs - food.carbs);
+        const fatDiff = Math.abs(fat - food.fat);
+        const totalDiff = calorieDiff + proteinDiff + carbsDiff + fatDiff;
+
+        if (totalDiff < minDifference) {
+            minDifference = totalDiff;
+            bestFood = food;
+        }
+    }
+
+    // Calculate the best food based on nutritional values
+    let bestCaloriesFood = null;
+    let bestProteinFood = null;
+    let bestCarbsFood = null;
+    let bestFatFood = null;
+    let minCaloriesDiff = Infinity;
+    let minProteinDiff = Infinity;
+    let minCarbsDiff = Infinity;
+    let minFatDiff = Infinity;
+
+    for (const food of foods) {
+        const calorieDiff = Math.abs(calories - food.calories);
+        const proteinDiff = Math.abs(protein - food.protein);
+        const carbsDiff = Math.abs(carbs - food.carbs);
+        const fatDiff = Math.abs(fat - food.fat);
+
+        if (calorieDiff < minCaloriesDiff) {
+            minCaloriesDiff = calorieDiff;
+            bestCaloriesFood = food.name;
+        }
+
+        if (proteinDiff < minProteinDiff) {
+            minProteinDiff = proteinDiff;
+            bestProteinFood = food.name;
+        }
+
+        if (carbsDiff < minCarbsDiff) {
+            minCarbsDiff = carbsDiff;
+            bestCarbsFood = food.name;
+        }
+
+        if (fatDiff < minFatDiff) {
+            minFatDiff = fatDiff;
+            bestFatFood = food.name;
+        }
+    }
+
+    // Display the recommendation
+    const recommendationElem = document.getElementById('recommendation');
+    if (bestFood) {
+        recommendationElem.innerHTML = `Based on your input, we recommend you to eat ${bestFood.name}.`;
+    } else {
+        recommendationElem.innerHTML = "Sorry, we couldn't find a suitable recommendation based on your input.";
+    }
+
+    // Display the best food for each nutrient
+    document.getElementById('best-calories-food').innerText = bestCaloriesFood;
+    document.getElementById('best-protein-food').innerText = bestProteinFood;
+    document.getElementById('best-carbs-food').innerText = bestCarbsFood;
+    document.getElementById('best-fat-food').innerText = bestFatFood;
+
+});
+    // For nutrition info, mess feedback, and reviews, you can add more logic here
+});
+
+ function submitFeedback() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // You can implement the logic to submit the feedback to the server here.
+            // For this example, we'll just display a response message.
+
+            const responseElem = document.getElementById('response');
+            responseElem.innerHTML = `Thank you, ${name}! Your feedback has been submitted.`;
+        }
+
+
+</script>

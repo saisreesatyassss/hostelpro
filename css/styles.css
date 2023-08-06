@@ -1,0 +1,941 @@
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+ 
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px; /* Adjust the height as per your preference */
+    width: auto; /* To maintain the aspect ratio */
+    margin-right: 20px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+nav li {
+    margin-left: 30px;
+}
+.active .nav-link {
+    color: #333; /* Replace with the desired darker color */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+
+.carousel-item {
+    height: 300px; /* Set a fixed height for the carousel items */
+}
+
+.carousel-item img {
+    height: 100%; /* Make the images fill the entire height of the carousel items */
+    width: 100%; /* Ensure the images maintain their aspect ratio and don't stretch */
+    object-fit: cover; /* Crop the images to fit the container while maintaining aspect ratio */
+}
+
+.admission-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.admission-cta h2 {
+    font-size: 30px;
+}
+
+.admission-cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+/* Animation */
+.container {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient for the header */
+.header-gradient {
+    background: linear-gradient(to right, #65a7f7, #845ec2);
+    color: #fff;
+    padding: 10px;
+}
+
+/* Gradient for the infrastructure section */
+.infrastructure-gradient {
+    background: linear-gradient(to right, #dcb0ed, #99c0f1);
+}
+
+/* Gradient for the admission CTA */
+.admission-cta {
+    background: linear-gradient(to right, #7bc6cc, #46addb);
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px 0;
+}
+
+ 
+/* Customize font and text colors */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    color: #444;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* Button styling */
+.btn {
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.social-icons .social-icon {
+    color: #007bff;
+    font-size: 24px;
+    margin: 0 8px;
+}
+
+.social-icons .social-icon:hover {
+    color: #0056b3;
+}
+
+.container {
+    animation: fadeInUp 1s ease;
+}
+ 
+/* Animation */
+.animate-fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animate-fadeInUp.animated {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease;
+}
+ 
+
+.hero-section {
+    background: linear-gradient(to right, #65a7f7, #845ec2);
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 80px 0;
+}
+
+.course-card {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.course-card i {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Admissions Section */
+.admissions-section {
+    background: linear-gradient(to right, #dcb0ed, #99c0f1);
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.admissions-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.admissions-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Placements Section */
+.placements-section {
+    padding: 80px 0;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 30px 0;
+}                                                                                                                                                        
+
+ 
+#home {
+  background-image: url('images/home1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Set the section height to fill the entire screen */
+  width: 100%; /* Set the section width to fill the entire screen */
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  padding-top: 00px; /* Adjust this value to vertically position the content */
+}
+
+.home-section h1 {
+  margin: 50px;
+  font-size: 36px;
+}
+
+.home-section p {
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff8000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #e56300;
+}
+  /* Add your existing styles for the hero content here */
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 50px;
+    left: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.button-container .btn {
+    margin: 20px 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 150px;
+}
+
+ /* Reset default margin and padding */
+ 
+.spacer {
+  /* Use margin or padding to create the desired gap */
+  height: 50px; /* Adjust the height as per your requirement */
+}
+ 
+ /* Reset default margin and padding */
+body, h1, h2, h3, p {
+    font-weight: 600;
+  /* margin: 10px; */
+  /* padding: 10px 10px; */
+}
+
+.image-content-section {
+    height: 500px;
+    border-radius: 50px;
+background-image: linear-gradient(to bottom, #89cff0, #281ba0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+}
+ .about-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.image-container-about {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container-about img {
+  width: 100%;
+  max-width: 500px; /* Adjust the image width as needed */
+}
+
+.content-container {
+  flex: 1;
+  padding: 0 20px;
+}
+
+
+
+ 
+/* VIT-AP Advantage Section */
+.advantage-section {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.advantage-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.advantage-section p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Upcoming Events Section */
+.events-section {
+    padding: 80px 0;
+}
+
+.events-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-info,
+.footer-links,
+.footer-address {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+}
+
+.footer-info h3,
+.footer-links h3,
+.footer-address h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-info form input,
+.footer-info form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.footer-info form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-info form button:hover {
+    background-color: #0056b3;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-address p {
+    margin: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Announcement Section */
+.announcement-section {
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+ }
+
+.announcement-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.announcement-section p {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.announcements-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.announcement-item {
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-item .announcement-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.announcement-item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.view-more-link {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.view-more-link:hover {
+    text-decoration: underline;
+}
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for the section titles */
+}
+
+.feature-list,
+.facility-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li,
+.facility-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature-list i,
+.facility-list i {
+    font-size: 24px;
+    color: #007bff; /* Blue color for the icon */
+    margin-right: 10px;
+}
+
+.feature-list span,
+.facility-list span {
+    font-size: 18px;
+    color: #333; /* Dark color for the text */
+}
+
+ /* Programmes Offered Section */
+.programmes-section {
+     background: linear-gradient(135deg, #a8e7f7, #89cff0);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden; /* Hide horizontal overflow */
+}
+
+.programmes-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.programmes-section p {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+/* Programmes Carousel */
+.programmes-carousel {
+     overflow-x: hidden; /* Hide horizontal scrollbar */
+     white-space: nowrap; /* Keep items in a single line */
+}
+
+.programmes-list {
+    display: inline-flex; /* Display items in a single row */
+    animation: scroll 20s linear infinite;
+    border-radius: 50%;
+    width: 500px;
+    height: 200px;
+    margin: 100px;
+ }
+
+.programme-item {
+    width: 180px;
+    margin: 50px;  
+}
+
+.programme-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    /* padding-left: 100PX;
+    padding-right: 100PX; */
+    /* padding-bottom: 80PX; */
+}
+
+.programme-item h3 {
+    color:rgb(0, 0, 0);
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1000%); } /* Adjust the percentage based on the number of course items */
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 300px; /* Set a fixed width for the gallery items */
+    height: 200px; /* Set a fixed height for the gallery items */
+    margin: 10px;
+    text-align: center;
+    overflow: hidden; /* Hide any overflow from images that don't fit exactly */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop the images to fit the container while maintaining aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Show the caption on hover */
+}
+.circular-image-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.course-card {
+    animation: zoomIn 1s ease;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+ .admission-section {
+        background: linear-gradient(to right, #7bc6cc, #46addb);
+        color: #fff;
+        text-align: center;
+        padding: 80px 0;
+    }
+
+    .admission-section h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .admission-section p {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .admission-cta {
+        animation: fadeInUp 1s ease;
+    }
+
+   
+
+    .btn {
+        font-size: 20px;
+        padding: 12px 24px;
+        border-radius: 5px;
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    /* Gradient for the admission CTA */
+    .admission-cta {
+        background: linear-gradient(to right, #7bc6cc, #46addb);
+        text-align: center;
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+
+    /* Styling for the Placements Section */
+.placements-section {
+    padding: 80px 0;
+}
+
+.placements-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #007bff; /* Blue color for the section titles */
+}
+
+.placements-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.package-details,
+.internship-opportunities,
+.testimonials,
+.placement-cta {
+    margin-bottom: 40px;
+}
+
+.package-info {
+    font-size: 24px;
+}
+
+.subsection-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for the subsection titles */
+}
+
+/* Styling for Testimonials */
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonial-text {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Styling for Placement CTA */
+.placement-cta {
+    text-align: center;
+}
+
+.cta-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Animation */
+.placements-section .subsection-title {
+    animation: fadeInUp 1s ease;
+}
+
+.placements-section .package-info,
+.placements-section .testimonial,
+.placements-section .placement-cta {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Styles for the sidebar menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially move the sidebar outside the left side of the screen */
+    width: 250px;
+    height: 100vh;
+    padding: 15px;
+    background-color: #f0f0f0;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0; /* Move the sidebar to the left when active */
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Add styles for the active link */
+.nav-item.active .nav-link {
+    color: #ff8c00; 
+    /* Change the active link color as desired */
+}
+
+
+ .sidebar {
+    width: 250px; /* Adjust the width as needed */
+    background-color: #f1f1f1; /* Sidebar background color */
+    padding: 20px; /* Add some padding to the sidebar */
+    border-radius: 10px; /* Add border-radius to give rounded corners */
+}
+
+/* Style for the menu toggle button */
+.menu-toggle {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

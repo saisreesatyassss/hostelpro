@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Set the background image to cover the entire screen */
+        body {
+            background-image: url('Images/Login.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+
+        .follow-btn {
+            background: #173456; 
+            color: #fff;
+            font-size: 16px;  
+            border: none;
+            border-radius: 25px;
+            padding: 12px 24px;
+            cursor: pointer;
+        }
+        
+        .icon {
+            vertical-align: middle;
+            margin-right: 10px; 
+        }
+
+        input {
+            border-radius: 10px;
+            height: 50px;
+            width: 300px;
+            size: 50px;
+            font-size: 25px;
+            padding-left: 12px;
+            border-color: #173456;
+        }
+    </style>
+</head>
+<body>
+    <form style="margin-left: 1000px; margin-top: 200px;" action="airoom.html">
+        <label style="font-size: 30px; padding-left: 90px;">Welcome!</label><br><br><br>
+        <label style="font-size: 25px;">Username</label><br>
+        <input type="text"><br><br>
+        <label style="font-size: 25px;">Password</label><br>
+        <input type="password"><br>
+        <label style="font-size: 20px; padding-left: 170px;">Forgot Password?</label><br><br>
+        <label style="padding-left: 100px;"></label><button style="border-radius: 24px; size: 20px; height: 40px; width: 90px; font-size: 20px; background-color: #F3B201; border-color: #F3B201;">Login</button>
+    </form>
+       <script>
+        function validateForm() {
+            // Get the input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Add your custom validation logic here
+            // For example, you can check if the username and password meet certain criteria
+            if (username !== 'valid_username' || password !== 'valid_password') {
+                alert('Invalid username or password. Please try again.');
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission if the validation passes
+        }
+    </script>
+</body>
+</html>

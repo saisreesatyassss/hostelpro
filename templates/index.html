@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance</title>
+</head>
+<body>
+    <h1>Face Recognition Attendance</h1>
+    {% if is_attendance_slot %}
+        <p>{{ current_slot_info }}</p>
+    {% else %}
+        <p>No attendance slot is currently active</p>
+    {% endif %}
+    
+    <div class="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" width="640" height="480" alt="Webcam">
+    </div>
+
+    <h2>Attendance Recorded</h2>
+    <ul>
+        {% for student in attendance_recorded %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Attendance Status</h2>
+    <p id="attendance-status">Absent</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Use jQuery to listen for keydown event and handle the response from Flask
+        $(document).keydown(function (e) {
+            // Replace 'your_student_name' with the actual student name from face recognition
+            if (e.key === 'r') {
+                $.post("/mark_attendance", { student_name: "SATYA", slot_name: "{{ current_slot }}"}, function (data) {
+                    // Process the response data here, if required
+                    console.log(data);
+                    if (data.status === "success") {
+                        $("#attendance-status").text("Present");
+                    } else {
+                        $("#attendance-status").text("Absent");
+                    }
+                });
+            }
+        });
+
+        // Use JavaScript to check if the image is loaded and handle the initial status
+        $("#video-stream").on("load", function() {
+            if (this.naturalWidth > 0 && this.naturalHeight > 0) {
+                $("#attendance-status").text("Present");
+            } else {
+                $("#attendance-status").text("Absent");
+            }
+        });
+    </script>
+</body>
+</html>

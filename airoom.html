@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        td{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* Add a border with gradient background to the whole page */
+            background: linear-gradient(45deg, #687c94, #ffffff, #687c94);
+            border: 5px solid #333;
+            box-sizing: border-box;
+        }
+
+        /* Styles for the menu button */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        /* Styles for the sidebar menu */
+        .sidebar {
+            position: fixed;
+            top: 80px;
+            left: -250px;
+            width: 250px;
+            height: 100vh;
+            padding: 15px;
+            background-color: #f8f9fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .nav-link {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #dcdcdc;
+        }
+
+        /* Add styles for the active link */
+        .nav-item.active .nav-link {
+            color: #ff8c00;
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffffff, #4836e6); /* Gradient background */
+
+}
+
+.person-info {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+ .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .person-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+
+        input[type="time"] {
+            width: 100px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button#addButton {
+            background-color: #28a745;
+        }
+
+        button#addButton:hover, button#checkButton:hover {
+            background-color: #1E7E34;
+        }
+
+        #result {
+             margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f2f2f2; /* Result section background color */
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" id="menu-button">&#9776; Menu</button>
+    <nav class="sidebar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="airoom.html">Ai Roommate Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Network.html">Students Network</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Attandance.html">Attandance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Leave.html">Leave</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Navigation.html">Indoor Navigation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Laundry.html">Laundry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Chatbot.html">Chatbot</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Mess.html">Mess</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Complaints.html">Complaints</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Your page content goes here -->
+    <div class="container">
+        <h1>AI Roommate Booking</h1>
+        <div id="people-info">
+            <div class="person-info">
+                <table>
+                    <tr>
+                        <td><label for="name1">Person 1 Name:</label></td>
+                        <td><input type="text" id="name1" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age1">Person 1 Age:</label></td>
+                        <td><input type="number" id="age1" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sleepTime1">Person 1 Sleep Time:</label></td>
+                        <td><input type="time" id="sleepTime1 " style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cleanliness1">Cleanliness (1-5):</label></td>
+                        <td><input type="number" id="cleanliness1" min="1" max="5" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="noiseTolerance1">Noise Tolerance (1-5):</label></td>
+                        <td><input type="number" id="noiseTolerance1" min="1" max="5" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="interests1">Interests (1-5):</label></td>
+                        <td><input type="number" id="interests1" min="1" max="5" style="width: 200px;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button id="addButton">Add Person</button>
+        <button id="checkButton">Find Roommate</button>
+        <div id="result"></div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    const menuButton = document.getElementById('menu-button');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    // Add event listener to close sidebar when clicking outside
+    document.addEventListener('click', (event) => {
+        const targetElement = event.target;
+        if (!targetElement.closest('.sidebar') && !targetElement.closest('#menu-button')) {
+            sidebar.classList.remove('active');
+        }
+    });
+   
+
+ let numOfPeople = 1;
+
+document.getElementById('addButton').addEventListener('click', function() {
+    numOfPeople++;
+    const peopleInfo = document.getElementById('people-info');
+    const personDiv = document.createElement('div');
+    personDiv.classList.add('person-info');
+    personDiv.innerHTML = `
+        <label for="name${numOfPeople}">Person ${numOfPeople} Name:</label>
+        <input type="text" id="name${numOfPeople}">
+        <label for="age${numOfPeople}">Person ${numOfPeople} Age:</label>
+        <input type="number" id="age${numOfPeople}">
+        <label for="sleepTime${numOfPeople}">Person ${numOfPeople} Sleep Time:</label>
+        <input type="time" id="sleepTime${numOfPeople}">
+        <label for="cleanliness${numOfPeople}">Cleanliness (1-5):</label>
+        <input type="number" id="cleanliness${numOfPeople}" min="1" max="5">
+        <label for="noiseTolerance${numOfPeople}">Noise Tolerance (1-5):</label>
+        <input type="number" id="noiseTolerance${numOfPeople}" min="1" max="5">
+        <label for="interests${numOfPeople}">Interests (1-5):</label>
+        <input type="number" id="interests${numOfPeople}" min="1" max="5">
+    `;
+    peopleInfo.appendChild(personDiv);
+});
+
+document.getElementById('checkButton').addEventListener('click', function() {
+    const peopleData = [];
+    for (let i = 1; i <= numOfPeople; i++) {
+        const name = document.getElementById(`name${i}`).value;
+        const age = document.getElementById(`age${i}`).value;
+        const sleepTime = document.getElementById(`sleepTime${i}`).value;
+        const cleanliness = parseInt(document.getElementById(`cleanliness${i}`).value);
+        const noiseTolerance = parseInt(document.getElementById(`noiseTolerance${i}`).value);
+        const interests = parseInt(document.getElementById(`interests${i}`).value);
+        peopleData.push({
+            name,
+            age,
+            sleepTime,
+            cleanliness,
+            noiseTolerance,
+            interests
+        });
+    }
+
+    const roommateMatches = findRoommates(peopleData);
+
+    displayResults(roommateMatches);
+    checkRoommateCompatibility(roommateMatches);
+});
+
+function findRoommates(peopleData) {
+    // Your roommate matching logic goes here...
+    // For simplicity, we will just sort the people based on sleep time in this example.
+    return peopleData.sort((a, b) => a.sleepTime.localeCompare(b.sleepTime));
+}
+
+function displayResults(roommateMatches) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+    roommateMatches.forEach((person, index) => {
+        const roommateDiv = document.createElement('div');
+        roommateDiv.classList.add('roommate-info');
+        roommateDiv.innerHTML = `
+            <h3>Roommate ${index + 1}</h3>
+            <p>Name: ${person.name}</p>
+            <p>Age: ${person.age}</p>
+            <p>Sleep Time: ${person.sleepTime}</p>
+            <p>Cleanliness: ${person.cleanliness}</p>
+            <p>Noise Tolerance: ${person.noiseTolerance}</p>
+            <p>Interests: ${person.interests}</p>
+        `;
+        resultDiv.appendChild(roommateDiv);
+    });
+}
+
+function checkRoommateCompatibility(roommateMatches) {
+    const compatibilityDiv = document.createElement('div');
+    compatibilityDiv.classList.add('compatibility-info');
+    compatibilityDiv.innerHTML = '<h3>Roommate Compatibility:</h3>';
+    for (let i = 0; i < roommateMatches.length - 1; i++) {
+        for (let j = i + 1; j < roommateMatches.length; j++) {
+            const person1 = roommateMatches[i];
+            const person2 = roommateMatches[j];
+            const cleanlinessDiff = Math.abs(person1.cleanliness - person2.cleanliness);
+            const noiseToleranceDiff = Math.abs(person1.noiseTolerance - person2.noiseTolerance);
+            const interestsDiff = Math.abs(person1.interests - person2.interests);
+            let compatibilityMsg = '';
+            if (cleanlinessDiff <= 2 && noiseToleranceDiff <= 2 && interestsDiff <= 2) {
+                compatibilityMsg = 'Good Match';
+            } else {
+                compatibilityMsg = 'Not a Good Match';
+            }
+            compatibilityDiv.innerHTML += `<p>${person1.name} and ${person2.name}: ${compatibilityMsg}</p>`;
+        }
+    }
+    document.getElementById('result').appendChild(compatibilityDiv);
+}
+
+
+
+</script>
